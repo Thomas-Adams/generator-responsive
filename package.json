@@ -1,0 +1,27 @@
+{
+  "name": "generator-responsive",
+  "version": "1.0.0",
+  "description": "Generator for mobile/responsive sites",
+  "files": [
+    "generators/app"
+  ],
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "responsive",
+    "mobile"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "path": "^0.12.7",
+    "util": "^0.10.3",
+    "yeoman-generator": "^0.22.5"
+  }
+}
