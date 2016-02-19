@@ -1,0 +1,57 @@
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/9/2014
+* Sass Version by Seth Coelen https://github.com/whatsnewsaes
+*/
+
+
+<% skeletonModules.forEach(function(module){ %>
+
+    <% if(module==='Functions') { %>
+        <%= @import "base/functions"; %>
+    <%}%>
+    <% if(module==='Normalize') { %>
+        <%= @import "base/normalize"; %>
+    <%}%>
+    <% if(module==='Variables') { %>
+        <%= @import "base/variables"; %>
+    <%}%>
+    <% if(module==='Base styles') { %>
+        <%= @import "base/base-styles"; %>
+    <%}%>
+    <% if(module==='Utils') { %>
+        <%= @import "base/utils"; %>
+    <%}%>
+    <% if(module==='Typography') { %>
+        <%= @import "base/typography"; %>
+    <%}%>
+    <% if(module==='Grid') { %>
+        <%= @import "modules/grid"; %>
+    <%}%>
+    <% if(module==='Buttons') { %>
+        <%= @import "modules/buttons"; %>
+    <%}%>
+    <% if(module==='Forms') { %>
+        <%= @import "modules/forms"; %>
+    <%}%>
+    <% if(module==='Lists') { %>
+        <%= @import "modules/lists"; %>
+    <%}%>
+    <% if(module==='Code') { %>
+        <%= @import "modules/code"; %>
+    <%}%>
+    <% if(module==='Tables') { %>
+        <%= @import "modules/tables"; %>
+    <%}%>
+    <% if(module==='Spacing') { %>
+        <%= @import "modules/spacing"; %>
+    <%}%>
+    <% if(module==='Media queries') { %>
+        <%= @import "modules/media-queries"; %>
+    <%}%>
+
+<% }); %>

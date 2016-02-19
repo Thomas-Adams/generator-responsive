@@ -1,0 +1,36 @@
+{
+  "name": "responsive",
+  "description": "",
+  "main": "",
+  "authors": [
+    "heinrich.adams@gmail.com <heinrich.adams@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Thomas-Adams/responsive",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/_common/js/lib/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "BttrLazyLoading": "~1.0.8",
+    "foundation": "~5.5.3",
+    "jquery-ui": "~1.11.4",
+    "jquery-lazy": "~0.6.4",
+    "onepage-scroll": "~1.3.1",
+    "jquery-focuspoint": "~1.1.1",
+    "PreloadJS": "^0.6.2",
+    "recliner": "https://github.com/Thomas-Adams/recliner.git#~0.2.3",
+    "scrollmagic": "^2.0.5",
+    "jquery": "~2.1.4",
+    "Slidebars": "~0.10.3",
+    "gsap": "https://github.com/greensock/GreenSock-JS.git#^1.18.2",
+    "skrollr": "~0.6.30",
+    "slick-carousel": "^1.5.9",
+    "touch-swipe": "https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git#1.6.x"
+  }
+}
