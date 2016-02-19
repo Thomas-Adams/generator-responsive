@@ -1,28 +1,29 @@
 {
-    "name": "generator-responsive",
-    "version": "1.0.0",
-    "description": "Generator for mobile/responsive sites",
-    "files": [
-        "app"
-    ],
-    "directories": {
-        "doc": "doc"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "yeoman-generator",
-        "generator",
-        "responsive",
-        "mobile"
-    ],
-    "author": "Thomas Adams",
-    "license": "ISC",
-    "dependencies": {
-        "nunjucks": "^2.3.0",
-        "path": "^0.12.7",
-        "util": "^0.10.3",
-        "yeoman-generator": "^0.22.5"
-    }
+  "name": "generator-responsive",
+  "version": "1.0.0",
+  "description": "Generator for mobile/responsive sites",
+  "files": [
+    "app"
+  ],
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "responsive",
+    "mobile"
+  ],
+  "author": "Thomas Adams",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "nunjucks": "^2.3.0",
+    "path": "^0.12.7",
+    "util": "^0.10.3",
+    "yeoman-generator": "^0.22.5"
+  }
 }

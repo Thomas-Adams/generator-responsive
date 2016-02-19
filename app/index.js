@@ -2,7 +2,8 @@
 var util = require('util'),
     path = require('path'),
     yeoman = require('yeoman-generator'),
-    htmlWiring = require('html-wiring');
+    htmlWiring = require('html-wiring'),
+    mkdirp = require('mkdirp');
 
 
 
@@ -20,6 +21,22 @@ module.exports = yeoman.Base.extend({
     },
 
     prompting: {
+
+        appname: function() {
+            var done = this.async();
+
+            var prompt = [{
+                type: 'input',
+                name: 'appname',
+                message: 'Enter directory name',
+                'default': path.basename(process.cwd())
+            }];
+
+            this.prompt(prompt, function(response) {
+                this.options.appname = response.appname;
+                done();
+            }.bind(this));
+        },
         cssFramework: function() {
             var done = this.async();
 
@@ -28,23 +45,18 @@ module.exports = yeoman.Base.extend({
                 name: 'cssFramework',
                 message: 'Select the CSS framework you want',
                 'default': 'None',
-                choices: ['None', 'Bootstrap', 'Skeleton'],
-                store: true
-            }];
-
-            this.prompt(prompt, function(response) {
-                this.options.cssFramework = response.cssFramework;
-                done();
-            }.bind(this));
-        },
-
-        bootstrapModules: function() {
-            var done = this.async();
-
-            var prompt = [{
-                when: 'cssFramework.Bootstrap',
+                choices: ['None', 'Bootstrap', 'Skeleton']
+            }, {
+                when: function(response) {
+                    if (response.cssFramework === 'Bootstrap') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+                type: 'checkbox',
                 name: 'bootstrapModules',
-                message: 'Which Bootstrap modules do want to include?',
+                message: 'Which Bootstrap modules do you want to include?',
                 'default': ['Variables', 'Mixins', 'Normalize', 'Glyphicons', 'Scaffolding', 'Grid', 'Utilities', 'Responsive utilities'],
                 choices: ['Variables', 'Mixins', 'Normalize', 'Print', 'Glyphicons', 'Scaffolding', 'Type', 'Code', 'Grid',
                     'Tables', 'Forms', 'Buttons', 'Component animations', 'Dropdowns', 'Button groups', 'Input groups',
@@ -52,21 +64,17 @@ module.exports = yeoman.Base.extend({
                     'Jumbotron', 'Thumbnails', 'Alerts', 'Progress bars', 'Media', 'List group', 'Panels', 'Responsive embed',
                     'Wells', 'Close', 'Modals', 'Tooltip', 'Popovers', 'Carousel', 'Utilities', 'Responsive utilities', 'Themes'
                 ]
-            }];
-
-            this.prompt(prompt, function(response) {
-                this.options.bootstrapModules = response.bootstrapModules;
-                done();
-            }.bind(this));
-        },
-
-        skeletonModules: function() {
-            var done = this.async();
-
-            var prompt = [{
-                when: 'cssFramework.Skeleton',
+            }, {
+                when: function(response) {
+                    if (response.cssFramework === 'Skeleton') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+                type: 'checkbox',
                 name: 'skeletonModules',
-                message: 'Which Skeleton modules do want to include?',
+                message: 'Which Skeleton modules do you want to include?',
                 'default': ['Functions', 'Variables', 'Utils', 'Normalize', 'Base styles', 'Typography', 'Media queries'],
                 choices: ['Functions', 'Variables', 'Utils', 'Normalize', 'Base styles', 'Typography',
                     'Spacing', 'Buttons', 'Code', 'Forms', 'Grid', 'Lists', 'Media queries', 'Tables'
@@ -74,6 +82,8 @@ module.exports = yeoman.Base.extend({
             }];
 
             this.prompt(prompt, function(response) {
+                this.options.cssFramework = response.cssFramework;
+                this.options.bootstrapModules = response.bootstrapModules;
                 this.options.skeletonModules = response.skeletonModules;
                 done();
             }.bind(this));
@@ -96,36 +106,19 @@ module.exports = yeoman.Base.extend({
             }.bind(this));
         },
 
-        navigation: function() {
+        buildTool: function() {
             var done = this.async();
 
             var prompt = [{
                 type: 'list',
-                name: 'navigation',
-                message: 'Select the navigation you want',
-                'default': 'Slide in off-canvas left',
-                choices: ['Slide in off-canvas left', 'Slide in off-canvas right', 'Left opoup menu', 'Right popup menu']
+                name: 'buildTool',
+                message: 'Select build tool/script you want',
+                'default': 'None',
+                choices: ['None', 'Grunt', 'Gulp']
             }];
 
             this.prompt(prompt, function(response) {
-                this.options.navigation = response.navigation;
-                done();
-            }.bind(this));
-        },
-
-        pageTransition: function() {
-            var done = this.async();
-
-            var prompt = [{
-                type: 'list',
-                name: 'pageTransition',
-                message: 'Select the page transition you want',
-                'default': 'Page wise scrolling',
-                choices: ['Page wise scrolling', 'Infinte scrolling']
-            }];
-
-            this.prompt(prompt, function(response) {
-                this.options.pageTransition = response.pageTransition;
+                this.options.buildTool = response.buildTool;
                 done();
             }.bind(this));
         }
@@ -133,19 +126,78 @@ module.exports = yeoman.Base.extend({
 
     writing: {
         basicSetup: function() {
-            this.mkdir('public');
-            this.mkdir('public/_common');
-            this.mkdir('public/_common/css');
-            this.mkdir('public/_common/css/fonts');
-            this.mkdir('public/_common/css/images');
-            this.mkdir('public/_common/js');
-            this.mkdir('public/_common/js/lib/vendor');
-            this.mkdir('public/_common/js/plugins');
-            this.mkdir('public/_common/js/src');
-            this.mkdir('public/_media');
-            this.mkdir('public/_media/images');
-            this.mkdir('public/_media/videos');
-            this.mkdir('sass');
+            mkdirp('public');
+            mkdirp('public/_common');
+            mkdirp('public/_common/css');
+            mkdirp('public/_common/css/fonts');
+            mkdirp('public/_common/css/images');
+            mkdirp('public/_common/js');
+            mkdirp('public/_common/js/lib/vendor');
+            mkdirp('public/_common/js/plugins');
+            mkdirp('public/_common/js/src');
+            mkdirp('public/_media');
+            mkdirp('public/_media/images');
+            mkdirp('public/_media/videos');
+            mkdirp('sass');
+
+
+            if (this.options.sassLibraries.indexOf('Bitters')) {
+                this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
+                this.directory('bitters', 'sass/bitters');
+            }
+
+            if (this.options.sassLibraries.indexOf('Bourbon')) {
+                this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
+                this.directory('bourbon', 'sass/bourbon');
+            }
+            if (this.options.sassLibraries.indexOf('Neat')) {
+                this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
+                this.directory('neat', 'sass/neat');
+            }
+            if (this.options.sassLibraries.indexOf('Refills')) {
+                mkdirp('sass/refills');
+            }
+            if (this.options.cssFramework === 'Bootstrap') {
+                this.sourceRoot(path.join(__dirname, 'templates', 'sass', 'bootstrap'));
+                mkdirp('sass/bootstrap');
+                this.copy('_bootstrap-variables.scss', 'sass/bootstrap/_bootstrap-variables.scss');
+                this.template('bootstrap.scss.ejs', 'sass/bootstrap/bootstrap.scss', this.options);
+            }
+            if (this.options.cssFramework === 'Skeleton') {
+                this.sourceRoot(path.join(__dirname, 'templates', 'sass', 'skeleton'));
+                mkdirp('sass/skeleton');
+                this.directory('base', 'sass/skeleton/base');
+                this.directory('modules', 'sass/skeleton/modules');
+                this.template('skeleton.scss.ejs', 'sass/skeleton/skeleton.scss', this.options);
+            }
+
+        },
+        setupApp: function() {
+
+            this.sourceRoot(path.join(__dirname, 'templates', 'basic'));
+            this.directory('bin', 'bin');
+            this.directory('routes', 'routes');
+            this.copy('.bowerrc', '.bowerrc');
+            this.copy('.gitignore', '.gitignore');
+            this.copy('.jshintrc', '.jshintrc');
+            this.copy('app.js', 'app.js');
+            this.copy('bower.json', 'bower.json');
+            this.template('config.rb.ejs', 'config.rb', this.options);
+            this.template('package.json.ejs', 'package.json', this.options);
+            this.sourceRoot(path.join(__dirname, 'templates', 'public', '_common', 'js', 'plugins'));
+            this.copy('io-loader.js', 'public/_common/js/plugins/io-loader.js');
+            this.copy('io-menu.js', 'public/_common/js/plugins/io-menu.js');
+            this.copy('io-simple-page-transition.js', 'public/_common/js/plugins/io-simple-page-transition.js');
         }
+    },
+
+    install: function() {
+        this.installDependencies({
+            bower: true,
+            npm: true,
+            callback: function() {
+                console.log('Everything is ready!');
+            }
+        });
     }
 });
