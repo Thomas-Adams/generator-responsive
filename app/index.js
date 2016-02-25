@@ -97,7 +97,7 @@ module.exports = yeoman.Base.extend({
                 name: 'sassLibraries',
                 message: 'Select the SASS libraries you want',
                 'default': ['Bourbon'],
-                choices: ['Bourbon', 'Neat', 'Bitters', 'Refills']
+                choices: ['Bourbon', 'Neat', 'Bitters']
             }];
 
             this.prompt(prompt, function(response) {
