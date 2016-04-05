@@ -6,12 +6,117 @@ var util = require('util'),
     mkdirp = require('mkdirp'),
     nunjucks = require('nunjucks');
 
+var PageGenerator = module.exports = function PageGenerator(args, options, config) {
+	  // By calling `NamedBase` here, we get the argument to the subgenerator call
+	  // as `this.name`.
+	  yeoman.Base.apply(this, arguments);
+};
 
+util.inherits(PageGenerator, yeoman.Base);
+
+
+PageGenerator.prototype.prompting = {
+		
+		pageName: function() {
+            var done = this.async();
+
+            var prompt = [{
+                type: 'input',
+                name: 'pageName',
+                message: 'Enter the complete path to the page',
+                'default': path.basename(process.cwd())
+            }];
+
+            this.prompt(prompt, function(response) {
+                this.options.pageName = response.pageName;
+                done();
+            }.bind(this));
+        },
+        
+        pageTransition : function()  {
+        	
+        	 var done = this.async();
+
+             var prompt = [{
+	            type: 'list',
+	            name: 'pageTransition',
+	            message: 'Select the page transition you want',
+	            'default': 'None',
+	            choices: ['None', 'vertical', 'horizontal']
+        	}];
+
+            this.prompt(prompt, function(response) {
+            	this.options.pageTransition = response.pageTransition;
+                done();
+            }.bind(this));
+		},
+        
+        menuPosition :  function()  { 
+        	var done = this.async();
+
+	        var prompt = [{
+	        	type: 'list',
+	            name: 'menuPosition',
+	            message: 'Select the menu position you want',
+	            'default': 'Left',
+	            choices: ['Left', 'Top', 'Right']
+	        }];
+	        this.prompt(prompt, function(response) {
+            	this.options.menuPosition = response.menuPosition;
+                done();
+            }.bind(this));
+        },
+        
+        accordionMenu :  function()  { 
+        	var done = this.async();
+
+	        var prompt = [{
+	        	type: 'list',
+	            name: 'accordionMenu',
+	            message: 'Select the type of the menu you want',
+	            'default': 'Left',
+	            choices: ['Flat', 'Accordion']
+	        }];
+	        this.prompt(prompt, function(response) {
+            	this.options.accordionMenu = response.accordionMenu;
+                done();
+            }.bind(this));
+	        
+        },
+        
+        slideCount : function() {
+                var done = this.async();
+
+                var prompt = [{
+                    type: 'input',
+                    name: 'slideCount',
+                    message: 'Enter number of sections',
+                    'default': '2'
+                }];
+
+                this.prompt(prompt, function(response) {
+                    this.options.slideCount = response.slideCount;
+                    done();
+                }.bind(this));
+        },
+        
+        globalTransitionEffect : {
+        	
+        	
+        	
+        }
+        
+        
+		
+			
+};
+
+
+
+
+/*
 module.exports = yeoman.Base.extend({
-    constructor: function() {
-        yeoman.Base.apply(this, arguments);
-    },
-
+   
     prompting: {
 
         pageName: function() {
@@ -94,6 +199,7 @@ module.exports = yeoman.Base.extend({
         }
     },
     writing: {
-        //TODO: implement templates
+        
     }
 });
+*/

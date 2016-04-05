@@ -64,7 +64,8 @@ module.exports = yeoman.Base.extend({
                     'Jumbotron', 'Thumbnails', 'Alerts', 'Progress bars', 'Media', 'List group', 'Panels', 'Responsive embed',
                     'Wells', 'Close', 'Modals', 'Tooltip', 'Popovers', 'Carousel', 'Utilities', 'Responsive utilities', 'Themes'
                 ]
-            }, {
+            },
+            {
                 when: function(response) {
                     if (response.cssFramework === 'Skeleton') {
                         return true;
@@ -96,7 +97,7 @@ module.exports = yeoman.Base.extend({
                 type: 'checkbox',
                 name: 'sassLibraries',
                 message: 'Select the SASS libraries you want',
-                'default': ['Bourbon'],
+                'default': ['Bourbon', 'Neat', 'Bitters'],
                 choices: ['Bourbon', 'Neat', 'Bitters']
             }];
 
