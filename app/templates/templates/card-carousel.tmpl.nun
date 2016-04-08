@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-image">
+        {% "carousel.tmpl.nun" %}
+    </div>
+    <div class="card-header">{{ card.header }}</div>
+    <div class="card-copy">
+        {% for par in card.paragraphs %} 
+            <p>{{ par }}</p>
+        {% endfor %}
+    </div>
+</div>

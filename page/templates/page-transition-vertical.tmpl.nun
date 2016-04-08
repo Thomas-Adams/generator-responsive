@@ -19,6 +19,7 @@
 {% block javascripts %} 
     {{ super() }}
     {% if globalTransitionEffect!='None' %}
+        <script src="_common/js/src/css3-page-animations.js"></script>
         <script src="_common/js/src/main-animations.js"></script>
     {% endif %}
     {% for lib in gsapLibraries %}
