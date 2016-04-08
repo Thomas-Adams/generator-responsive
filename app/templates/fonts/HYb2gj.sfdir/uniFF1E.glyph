@@ -1,0 +1,116 @@
+StartChar: uniFF1E
+Encoding: 730 65310 474
+Width: 2048
+Flags: W
+TtInstrs:
+PUSHB_7
+ 126
+ 2
+ 1
+ 108
+ 2
+ 1
+ 5
+PUSHW_1
+ -16
+NPUSHB
+ 39
+ 3
+ 5
+ 4
+ 5
+ 118
+ 2
+ 3
+ 20
+ 2
+ 3
+ 4
+ 1
+ 6
+ 0
+ 6
+ 118
+ 2
+ 1
+ 20
+ 2
+ 2
+ 1
+ 0
+ 2
+ 1
+ 8
+ 5
+ 6
+ 3
+ 0
+ 1
+ 16
+ 1
+ 2
+ 1
+ 7
+ 4
+ 0
+ 2
+SVTCA[y-axis]
+RTHG
+MDAP[rnd]
+MDRP[min,rnd,black]
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+RTG
+SRP0
+MDRP[rp0,min,rnd,white]
+DELTAP1
+SHP[rp2]
+RDTG
+MDRP[rp0,min,rnd,black]
+SHP[rp2]
+RTG
+MDRP[rnd,white]
+SRP2
+IP
+SHP[rp2]
+SDPVTL[orthog]
+SFVTCA[y-axis]
+SRP0
+CALL
+SDPVTL[orthog]
+RDTG
+MDRP[rnd,grey]
+SVTCA[x-axis]
+SHP[rp2]
+SDPVTL[orthog]
+SFVTCA[y-axis]
+RTG
+CALL
+SDPVTL[orthog]
+RDTG
+MDRP[rnd,grey]
+IUP[x]
+IUP[y]
+SVTCA[y-axis]
+SHPIX
+SVTCA[x-axis]
+DELTAP1
+DELTAP1
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+SplineSet
+66 178 m 1,0,-1
+ 66 352 l 1,1,-1
+ 944 731 l 1,2,-1
+ 66 1110 l 1,3,-1
+ 66 1284 l 1,4,-1
+ 1161 815 l 1,5,-1
+ 1161 647 l 1,6,-1
+ 66 178 l 1,0,-1
+EndSplineSet
+Validated: 1
+Layer: 2
+Substitution2: "'vert' Vertical Alternates (obs) in CJK Ideographic lookup 0 subtable" logicalor
+EndChar

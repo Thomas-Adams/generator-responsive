@@ -1,0 +1,23 @@
+StartChar: logicaland
+Encoding: 8743 8743 292
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+409 -44 m 1,0,-1
+ 922 1674 l 1,1,-1
+ 1121 1674 l 1,2,-1
+ 1666 -44 l 1,3,-1
+ 1486 -44 l 1,4,-1
+ 1023 1448 l 1,5,-1
+ 583 -44 l 1,6,-1
+ 409 -44 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar

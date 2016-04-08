@@ -1,0 +1,20 @@
+StartChar: uni4E28
+Encoding: 20008 20008 4969
+Width: 2048
+Flags: W
+LayerCount: 2
+Back
+Fore
+SplineSet
+883 1716 m 1,0,-1
+ 1145 1714 l 1,1,-1
+ 1138 1369 l 1,2,-1
+ 1138 317 l 1,3,-1
+ 1145 -1 l 1,4,-1
+ 883 -1 l 1,5,-1
+ 890 329 l 1,6,-1
+ 890 1372 l 1,7,-1
+ 883 1716 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar

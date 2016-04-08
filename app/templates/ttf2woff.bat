@@ -1,0 +1,1 @@
+build\sfnt2woff.exe fonts\generated\web.ttf

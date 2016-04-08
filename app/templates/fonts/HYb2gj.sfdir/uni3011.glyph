@@ -1,0 +1,33 @@
+StartChar: uni3011
+Encoding: 543 12305 287
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+SplineSet
+876 1737 m 1,0,-1
+ 876 -106 l 1,1,-1
+ 125 -106 l 2,2,3
+ 104 -106 104 -106 98 -85 c 128,-1,4
+ 92 -64 92 -64 125 -36 c 2,5,-1
+ 178 7 l 2,6,7
+ 255 69 255 69 317 228.5 c 128,-1,8
+ 379 388 379 388 404 533 c 128,-1,9
+ 429 678 429 678 425 874 c 0,10,11
+ 420 1072 420 1072 379 1237 c 128,-1,12
+ 338 1402 338 1402 266 1504.5 c 128,-1,13
+ 194 1607 194 1607 156 1645 c 2,14,-1
+ 128 1672 l 2,15,16
+ 95 1704 95 1704 101 1720.5 c 128,-1,17
+ 107 1737 107 1737 139 1737 c 2,18,-1
+ 876 1737 l 1,0,-1
+EndSplineSet
+Validated: 33
+Layer: 2
+Substitution2: "'vert' Vertical Alternates (obs) in CJK Ideographic lookup 0 subtable" uniE011
+EndChar

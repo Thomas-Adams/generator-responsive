@@ -1,0 +1,1 @@
+fontforge -script build\convert-svg.pe fonts\generated\web.ttf

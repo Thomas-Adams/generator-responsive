@@ -1,0 +1,24 @@
+StartChar: periodcentered
+Encoding: 183 183 260
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+1027 614 m 0,0,1
+ 925 612 925 612 868 673.5 c 128,-1,2
+ 811 735 811 735 811 824 c 0,3,4
+ 811 910 811 910 869 975 c 128,-1,5
+ 927 1040 927 1040 1019.5 1040.5 c 128,-1,6
+ 1112 1041 1112 1041 1176 977 c 128,-1,7
+ 1240 913 1240 913 1240.5 823.5 c 128,-1,8
+ 1241 734 1241 734 1176 674.5 c 128,-1,9
+ 1111 615 1111 615 1027 614 c 0,0,1
+EndSplineSet
+Validated: 33
+EndChar

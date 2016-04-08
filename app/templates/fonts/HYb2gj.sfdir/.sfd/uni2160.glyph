@@ -1,0 +1,33 @@
+StartChar: uni2160
+Encoding: 8544 8544 431
+Width: 2048
+Flags: W
+TtInstrs:
+SVTCA[x-axis]
+NPUSHB
+ 5
+ 2
+ 3
+ 12
+ 0
+ 4
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+887 1512 m 1,0,-1
+ 914 1512 l 1,1,-1
+ 1153 1512 l 1,2,-1
+ 1153 108 l 1,3,-1
+ 887 108 l 1,4,-1
+ 887 1512 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar

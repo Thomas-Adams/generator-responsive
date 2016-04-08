@@ -1,0 +1,1 @@
+fontforge -script build\convert-otf.pe G:\_node_workspaces\font-opt\fonts\generated\web.ttf

@@ -1,0 +1,20 @@
+StartChar: uni25C6
+Encoding: 9670 9670 340
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+1969 816 m 1,0,-1
+ 1017 -143 l 1,1,-1
+ 78 816 l 1,2,-1
+ 1017 1747 l 1,3,-1
+ 1969 816 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar

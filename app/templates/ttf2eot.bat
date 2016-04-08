@@ -1,0 +1,1 @@
+build\ttf2eot.exe fonts\generated\web.ttf fonts\generated\web.eot

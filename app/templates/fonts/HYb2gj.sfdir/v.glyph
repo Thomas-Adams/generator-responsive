@@ -1,0 +1,156 @@
+StartChar: v
+Encoding: 375 118 119
+Width: 1014
+Flags: W
+TtInstrs:
+NPUSHB
+ 9
+ 212
+ 6
+ 1
+ 135
+ 6
+ 151
+ 6
+ 2
+ 6
+PUSHW_1
+ -8
+NPUSHB
+ 73
+ 30
+ 34
+ 72
+ 6
+ 6
+ 1
+ 29
+ 11
+ 0
+ 1
+ 58
+ 168
+ 0
+ 1
+ 0
+ 8
+ 37
+ 40
+ 72
+ 0
+ 8
+ 29
+ 33
+ 72
+ 6
+ 55
+ 82
+ 4
+ 3
+ 4
+ 89
+ 5
+ 6
+ 20
+ 5
+ 6
+ 8
+ 5
+ 3
+ 0
+ 55
+ 82
+ 2
+ 3
+ 2
+ 89
+ 1
+ 0
+ 20
+ 1
+ 0
+ 3
+ 1
+ 7
+ 138
+ 3
+ 154
+ 3
+ 170
+ 3
+ 3
+ 3
+ 1
+ 7
+ 4
+ 5
+ 6
+ 2
+ 1
+ 6
+ 6
+ 0
+ 10
+SVTCA[y-axis]
+MIAP[rnd]
+SHP[rp2]
+MIAP[rnd]
+SHP[rp1]
+MIAP[rnd]
+SHP[rp1]
+SRP1
+SRP2
+IP
+DELTAP1
+SVTCA[x-axis]
+SRP0
+MDRP[rp0,grey]
+RTHG
+MDRP[min,rnd,black]
+SDPVTL[orthog]
+RTG
+CALL
+SDPVTL[orthog]
+CALL
+MDRP[rnd,grey]
+SVTCA[x-axis]
+RTHG
+SRP0
+MDRP[rp0,min,rnd,black]
+MDRP[grey]
+SDPVTL[orthog]
+RTG
+CALL
+SDPVTL[orthog]
+CALL
+MDRP[rnd,grey]
+IUP[x]
+IUP[y]
+SVTCA[x-axis]
+CALL
+CALL
+DELTAP2
+SDB
+DELTAP1
+SDB
+DELTAP1
+CALL
+DELTAP1
+DELTAP2
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+SplineSet
+381 0 m 1,0,-1
+ 0 1081 l 1,1,-1
+ 205 1081 l 1,2,-1
+ 510 164 l 1,3,-1
+ 817 1081 l 1,4,-1
+ 1014 1081 l 1,5,-1
+ 631 0 l 1,6,-1
+ 381 0 l 1,0,-1
+EndSplineSet
+Validated: 1
+Layer: 2
+EndChar

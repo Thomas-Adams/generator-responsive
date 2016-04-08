@@ -1,0 +1,42 @@
+StartChar: arrowup
+Encoding: 604 8593 348
+Width: 2048
+Flags: W
+TtInstrs:
+SVTCA[x-axis]
+NPUSHB
+ 5
+ 12
+ 13
+ 12
+ 1
+ 0
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+SplineSet
+938 -82 m 1,0,-1
+ 938 1308 l 1,1,-1
+ 494 1110 l 2,2,3
+ 484 1105 484 1105 479 1105.5 c 128,-1,4
+ 474 1106 474 1106 472.5 1113.5 c 128,-1,5
+ 471 1121 471 1121 481 1132 c 2,6,-1
+ 1019 1690 l 1,7,-1
+ 1583 1134 l 2,8,9
+ 1605 1111 1605 1111 1600.5 1102.5 c 128,-1,10
+ 1596 1094 1596 1094 1556 1113 c 2,11,-1
+ 1110 1315 l 1,12,-1
+ 1110 -82 l 1,13,-1
+ 938 -82 l 1,0,-1
+EndSplineSet
+Validated: 1
+Layer: 2
+Substitution2: "'vert' Vertical Alternates (obs) in CJK Ideographic lookup 0 subtable" arrowright
+EndChar

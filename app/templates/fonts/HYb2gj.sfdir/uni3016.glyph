@@ -1,0 +1,46 @@
+StartChar: uni3016
+Encoding: 540 12310 284
+Width: 2048
+Flags: W
+TtInstrs:
+SVTCA[y-axis]
+NPUSHB
+ 15
+ 32
+ 21
+ 12
+ 0
+ 20
+ 1
+ 0
+ 7
+ 31
+ 32
+ 22
+ 21
+ 7
+ 19
+ 20
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+SVTCA[x-axis]
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+Validated: 1
+Layer: 2
+Substitution2: "'vert' Vertical Alternates (obs) in CJK Ideographic lookup 0 subtable" uniE00E
+EndChar

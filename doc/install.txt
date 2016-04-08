@@ -1,0 +1,9 @@
+1. Checkout this project from subversion
+2. Install FontForge on to your computer, note that Fontforge should ideally come with the python extension.
+3. Add the path FontForgeBuilds\bin\fontforge.exe to your PATH variable.
+4. Install the fonttools
+    git clone https://github.com/behdad/fonttools.git
+    cd fonttools
+    python setup.py install
+
+5. rum npm install

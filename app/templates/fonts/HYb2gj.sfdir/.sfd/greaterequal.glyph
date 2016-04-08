@@ -1,0 +1,28 @@
+StartChar: greaterequal
+Encoding: 8805 8805 317
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+1804 974 m 1,0,-1
+ 1805 863 l 1,1,-1
+ 236 330 l 1,2,-1
+ 236 512 l 1,3,-1
+ 1464 921 l 1,4,-1
+ 236 1350 l 1,5,-1
+ 236 1518 l 1,6,-1
+ 1804 974 l 1,0,-1
+1805 735 m 1,7,-1
+ 1804 560 l 1,8,-1
+ 237 31 l 1,9,-1
+ 236 208 l 1,10,-1
+ 1805 735 l 1,7,-1
+EndSplineSet
+Validated: 1
+EndChar

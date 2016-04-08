@@ -1,0 +1,44 @@
+StartChar: SF030000
+Encoding: 9488 9488 1028
+Width: 2048
+Flags: W
+TtInstrs:
+SVTCA[y-axis]
+NPUSHB
+ 10
+ 2
+ 3
+ 12
+ 5
+ 4
+ 2
+ 1
+ 7
+ 5
+ 0
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+SVTCA[x-axis]
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+0 758 m 1,0,-1
+ 0 878 l 1,1,-1
+ 1080 878 l 1,2,-1
+ 1080 -205 l 1,3,-1
+ 967 -205 l 1,4,-1
+ 967 758 l 1,5,-1
+ 0 758 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar

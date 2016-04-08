@@ -1,0 +1,42 @@
+StartChar: uni2165
+Encoding: 692 8549 436
+Width: 2048
+Flags: W
+TtInstrs:
+SVTCA[x-axis]
+NPUSHB
+ 5
+ 9
+ 10
+ 12
+ 7
+ 11
+MDAP[rnd]
+ALIGNRP
+MIRP[rp0,min,rnd,black]
+ALIGNRP
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+SplineSet
+716 512 m 1,0,-1
+ 927 1510 l 1,1,-1
+ 1188 1510 l 1,2,-1
+ 863 116 l 1,3,-1
+ 560 116 l 1,4,-1
+ 213 1510 l 1,5,-1
+ 493 1510 l 1,6,-1
+ 716 512 l 1,0,-1
+1523 1513 m 1,7,-1
+ 1550 1513 l 1,8,-1
+ 1783 1513 l 1,9,-1
+ 1783 109 l 1,10,-1
+ 1523 109 l 1,11,-1
+ 1523 1513 l 1,7,-1
+EndSplineSet
+Validated: 1
+Layer: 2
+EndChar

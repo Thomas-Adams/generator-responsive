@@ -1,0 +1,1 @@
+build\woff2_compress.exe fonts\generated\web.ttf

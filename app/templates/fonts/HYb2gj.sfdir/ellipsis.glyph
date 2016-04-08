@@ -1,0 +1,15 @@
+StartChar: ellipsis
+Encoding: 525 8230 269
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+Validated: 1
+Layer: 2
+Substitution2: "'vert' Vertical Alternates (obs) in CJK Ideographic lookup 0 subtable" uniE003
+EndChar

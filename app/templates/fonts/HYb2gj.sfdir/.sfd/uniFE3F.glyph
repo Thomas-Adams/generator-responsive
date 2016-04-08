@@ -1,0 +1,22 @@
+StartChar: uniFE3F
+Encoding: 65087 65087 794
+Width: 2048
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 2
+Back
+Fore
+SplineSet
+1852 -30 m 1,0,-1
+ 1025 421 l 1,1,-1
+ 188 -30 l 1,2,-1
+ 101 118 l 1,3,-1
+ 1022 607 l 1,4,-1
+ 1947 122 l 1,5,-1
+ 1852 -30 l 1,0,-1
+EndSplineSet
+Validated: 1
+EndChar

@@ -1,0 +1,20 @@
+StartChar: uni001F
+Encoding: 288 31 32
+Width: 1024
+Flags: W
+TtInstrs:
+IUP[x]
+IUP[y]
+EndTTInstrs
+LayerCount: 3
+Back
+Fore
+SplineSet
+1005 1326 m 1,0,-1
+ 527 275 l 1,1,-1
+ 24 1327 l 1,2,-1
+ 1005 1326 l 1,0,-1
+EndSplineSet
+Validated: 1
+Layer: 2
+EndChar
