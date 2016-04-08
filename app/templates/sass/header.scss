@@ -1,41 +1,5 @@
 @import "bourbon/bourbon";
 
-/* General settings */
-$header-color: #EFEFEF;
-$header-width: 100%;
-$header-z-index: 1000;
-$header-position: fixed;
-$header-top: 0px;
-$header-left: 0px;
-$header-h1-position: absolute;
-$header-h1-top: 0px;
-$header-left-h1-left: 20%;
-$header-h1-margin: 10px null 10px null;
-$header-h1-font-size: 1.5em;
-$header-i-padding: 10px 10px 10px 10px;
-$header-i-margin: 10px null null 10px;
-$header-i-border-color:#ffffff;
-$header-i-cursor: pointer;
-$header-i-border: 1px solid $header-i-border-color;
-$header-logo-width: 35%;
-$header-logo-position: absolute;
-$header-logo-top: 0;
-$header-logo-z-index: 6000;
-
-/* left settings */
-$header-left-logo-right: 3%;
-
-/* left settings */
-$header-right-h1-left: 40%;
-$header-right-i-position: absolute;
-$header-right-i-right: 1%;
-$header-right-logo-left: 1%;
-
-/* top settings */
-$header-top-position: fixed;
-
-
-
 header.left {
     color: $header-color;
     width:$header-width;

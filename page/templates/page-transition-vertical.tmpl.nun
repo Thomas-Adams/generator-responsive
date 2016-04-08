@@ -7,7 +7,7 @@
     {% if globalTransitionEffect!='None' %}
         <link href="_common/css/animations.css" rel="stylesheet">
     {% endif %}
-    <link href="_common/css/main-header-banner-footer.css" rel="stylesheet">
+    <link href="_common/css/page-vertical-slides.css" rel="stylesheet">
     <link href="_common/css/header.css" rel="stylesheet">
     <link href="_common/css/slide-push-menu.css" rel="stylesheet">
     {% for cp in usedComponents %}

@@ -1,38 +1,26 @@
-$HeadLineFont : 'bmwtypechineseregular';
-
-
+@import '_paragraph-variables';
 
 .paragraph-headlines {
     .headline {
-        font-family: 'bmwtypechineseregular';
-        font-size: 2.25em;
-        font-weight: bold;
+        font-family: $paragraph-headline-font-family;
+        font-size: $paragraph-headline-font-size;
+        font-weight: $paragraph-headline-font-weight;
     }
 
     .subheadline {
-        font-family: 'bmwtypechineseregular';
-        font-size: 1.25em;
-        font-weight: normal;
+        font-family: $paragraph-subheadline-font-family;
+        font-size: $paragraph-subheadline-font-size;
+        font-weight: $paragraph-subheadline-font-weight;
     }
 }
 
 .paragraph-text {
-    position: absolute;
-    top: 65%;
-    color: white;
-    left: 7%;
+    position: $paragraph-text-position;
+    color: $paragraph-text-color;
 }
 
 .paragraph-text-darkened {
-    position: absolute;
-    top: 65%;
-    color: darken(white,50%);
-    left: 7%;
+    position: $paragraph-text-darkened-position;
+    color: $paragraph-text-darkened-color;
 }
 
-#pgh-3 {
-    position: absolute;
-    top: 12%;
-    color: white;
-    left: 7%;
-}

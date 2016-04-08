@@ -1,0 +1,74 @@
+@import "bourbon/bourbon"; 
+@import "_page-vertical-slides-variables";
+
+div.container-fluid {
+    width:$container-fluid-width;
+    height:$container-fluid-height;
+    @include position($container-fluid-position,$container-fluid-top null null $container-fluid-left);
+    @include perspective($container-fluid-perspective);
+    padding:$container-fluid-padding;
+}
+nav {
+    background:$nav-background-color;
+}
+
+/* lazy loading styles */
+.lazy {
+  opacity: $transition-lazy-start-opacity;
+  @include transition($transition-lazy-loaded);
+}
+
+.lazy-loaded {
+  opacity: $transition-lazy-loaded-opacity;
+}
+
+section {
+    width: $section-width;
+	height: $section-height;
+    @include position($section-position, $section-top null null $section-left);
+	visibility: $section-visibility;
+	overflow: $section-overflow;
+    @include backface-visibility($section-backface-visibility);
+    @include transform(translate3d(0,0,0));
+    @include transform-style(preserve-3d);
+}
+
+section.current {
+    visibility: $section-current-visibility;
+    z-index: $section-current-zindex;
+}
+
+.ontop {
+	z-index: $section-ontop-zindex;
+}
+
+
+/* This is mainly for the background images of each section ("page"). */
+/* !FOCUSED IMAGES */
+/*-----------------------------------------*/
+.focuspoint {
+  position: $focuspoint-position; /*Any position but static should work*/
+  overflow: focuspoint-overflow;
+  height: $focuspoint-height;
+}
+.focuspoint img {	
+  @include position($focuspoint-image-position,$focuspoint-image-top null null $focuspoint-image-left);
+  margin: $focuspoint-image-margin;
+  display: $focuspoint-image-display;
+  /* fill and maintain aspect ratio */
+  width:  $focuspoint-image-width; height:  $focuspoint-image-height;
+  min-width: $focuspoint-image-min-width;
+  min-height: $focuspoint-image-min-height;
+  max-height: $focuspoint-image-max-height;
+  max-width: $focuspoint-image-max-width;
+}
+
+
+div.overlay {
+    z-index: $overlay-zindex;
+    width: $overlay-width;
+    height: $overlay-height;
+    display: $overlay-display;
+    background: $overlay-background;
+    @include position($overlay-position, $overlay-top null null $overlay-left);    
+}
