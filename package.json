@@ -21,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.4.1",
-    "nunjucks": "^2.3.0",
+    "nunjucks": "^2.4.1",
     "path": "^0.12.7",
     "util": "^0.10.3",
     "yeoman-generator": "^0.22.5"

@@ -1,0 +1,100 @@
+@import "bourbon/bourbon";
+
+/* General settings */
+$header-color: #EFEFEF;
+$header-width: 100%;
+$header-z-index: 1000;
+$header-position: fixed;
+$header-top: 0px;
+$header-left: 0px;
+$header-h1-position: absolute;
+$header-h1-top: 0px;
+$header-left-h1-left: 20%;
+$header-h1-margin: 10px null 10px null;
+$header-h1-font-size: 1.5em;
+$header-i-padding: 10px 10px 10px 10px;
+$header-i-margin: 10px null null 10px;
+$header-i-border-color:#ffffff;
+$header-i-cursor: pointer;
+$header-i-border: 1px solid $header-i-border-color;
+$header-logo-width: 35%;
+$header-logo-position: absolute;
+$header-logo-top: 0;
+$header-logo-z-index: 6000;
+
+/* left settings */
+$header-left-logo-right: 3%;
+
+/* left settings */
+$header-right-h1-left: 40%;
+$header-right-i-position: absolute;
+$header-right-i-right: 1%;
+$header-right-logo-left: 1%;
+
+/* top settings */
+$header-top-position: fixed;
+
+
+
+header.left {
+    color: $header-color;
+    width:$header-width;
+    z-index: $header-z-index;
+    @include position($header-position,$header-top null null $header-left);
+    h1 {
+        @include position($header-h1-position,$header-h1-top null null $header-left-h1-left);
+        @include margin($header-h1-margin);
+        font-size: $header-h1-font-size;
+    }
+    i {
+        @include margin($header-i-margin);
+        @include padding($header-i-padding);
+        border: $header-i-border;
+        cursor: $header-i-cursor;
+    }
+
+    .logo {
+        width:$header-logo-width;
+        @include position($header-logo-position,$header-logo-top $header-left-logo-right null null);
+        z-index: $header-logo-z-index;
+    }
+}
+
+header.right {
+    color: $header-color;
+    width:$header-width;
+    z-index: $header-z-index;
+    @include position($header-position,$header-top null null $header-left);
+    h1 {
+        @include position($header-h1-position,$header-h1-top null null $header-right-h1-left);
+        @include margin($header-h1-margin);
+        font-size: $header-h1-font-size;
+    }
+    i {
+        @include margin($header-i-margin);
+        @include padding($header-i-padding);
+        border: $header-i-border;
+        cursor: $header-i-cursor;
+        @include position($header-right-i-position, null $header-right-i-right null null);
+    }
+}
+
+
+header.top {
+	color: $header-color;
+    width:$header-width;
+    z-index: $header-z-index;
+    @include position($header-top-position,$header-top null null $header-left);
+    h1 {
+        @include position($header-h1-position,$header-h1-top null null $header-right-h1-left);
+        @include margin($header-h1-margin);
+        font-size: $header-h1-font-size;
+    }
+    i {
+        @include margin($header-i-margin);
+        @include padding($header-i-padding);
+        border: $header-i-border;
+        cursor: $header-i-cursor;
+        @include position($header-right-i-position, null $header-right-i-right null null);
+    }
+}

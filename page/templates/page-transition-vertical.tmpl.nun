@@ -1,0 +1,59 @@
+{% extends "base.tmpl.nun" %}
+{% block stylesheets %}
+    {{ super() }}          
+    {% for f in fonts %}         
+        <link href="_common/css/{{ f }}.css" rel="stylesheet">
+    {% endfor %}
+    {% if globalTransitionEffect!='None' %}
+        <link href="_common/css/animations.css" rel="stylesheet">
+    {% endif %}
+    <link href="_common/css/main-header-banner-footer.css" rel="stylesheet">
+    <link href="_common/css/header.css" rel="stylesheet">
+    <link href="_common/css/slide-push-menu.css" rel="stylesheet">
+    {% for cp in usedComponents %}
+        {% if cp %}
+        <link href="_common/css/{{ cp | lower}}.css" rel="stylesheet">
+        {% endif %}
+    {% endfor %}     
+{% endblock %}
+{% block javascripts %} 
+    {{ super() }}
+    {% if globalTransitionEffect!='None' %}
+        <script src="_common/js/src/main-animations.js"></script>
+    {% endif %}
+    {% for lib in gsapLibraries %}
+        <script src="_common/js/lib/vendor/gsap/src/uncompressed/{{ lib }}"></script>
+    {% endfor %}
+    <script src="_common/js/src/main-header-banner-footer.js"></script>
+    <script src="_common/js/src/main-{{ menuTransition | lower }}-{{ menuPosition | lower }}-navigation.js"></script>            
+{% endblock %}
+
+{% block body %}
+    <body class="cbp-spmenu-push">
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-{{ menuPosition | lower }}" id="cbp-spmenu-s{{ 1 if menuPosition=='Left' else ( 2 if menuPosition=='Right' else 3 ) }}">
+            <h3>{{ menuTitle }}<i class="fa fa-times" id="navClose"></i></h3>
+            {% set index = 1 %}
+            {% for menu in menus %}
+                 <a href="#" id="p{{ index }}">{{ menu.title }}</a>
+                 {% set index = index + 1 %}
+            {% endfor %}                    
+        </nav>
+        <div class="container-fluid">
+            <header class="top">
+                <i class="fa fa-bars" id="navToggle"></i>
+                <h1>{{ headerText }}</h1>
+                <img class="logo" src="{{ logoPath }}">
+            </header>
+            {% set index = 1 %}
+            {% for menu in menus %}
+                <section id="sec{{ index }}" data-animation="{{ globalTransitionEffectIndex }}" class="">
+                    <div class="focuspoint" data-focus-x="0" data-focus-y="0">
+                        <img class="lazy main" data-src="{{menu.backGroundImage}}" height="100%" data-image-h="100%"/>
+                    </div>
+                    <!-- content goes here for section {{index}} -->
+                </section>
+                {% set index = index + 1 %}
+            {% endfor %}            
+        </div>
+    </body>
+{% endblock %}        
