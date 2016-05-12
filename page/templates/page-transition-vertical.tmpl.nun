@@ -1,5 +1,6 @@
 {% extends "base.tmpl.nun" %}
 {% block stylesheets %}
+    <!--build:css stylesheet.min.css-->
     {{ super() }}          
     {% for f in fonts %}         
         <link href="_common/css/{{ f }}.css" rel="stylesheet">
@@ -14,9 +15,11 @@
         {% if cp %}
         <link href="_common/css/{{ cp | lower}}.css" rel="stylesheet">
         {% endif %}
-    {% endfor %}     
+    {% endfor %}
+    <!--/build -->     
 {% endblock %}
 {% block javascripts %} 
+    <!-- build:js app.min.js-->
     {{ super() }}
     {% if globalTransitionEffect!='None' %}
         <script src="_common/js/src/css3-page-animations.js"></script>
@@ -26,7 +29,8 @@
         <script src="_common/js/lib/vendor/gsap/src/uncompressed/{{ lib }}"></script>
     {% endfor %}
     <script src="_common/js/src/main-header-banner-footer.js"></script>
-    <script src="_common/js/src/main-{{ menuTransition | lower }}-{{ menuPosition | lower }}-navigation.js"></script>            
+    <script src="_common/js/src/main-{{ menuTransition | lower }}-{{ menuPosition | lower }}-navigation.js"></script>
+    <!--/build -->            
 {% endblock %}
 
 {% block body %}

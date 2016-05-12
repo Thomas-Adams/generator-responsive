@@ -97,8 +97,8 @@ module.exports = yeoman.Base.extend({
                 type: 'checkbox',
                 name: 'sassLibraries',
                 message: 'Select the SASS libraries you want',
-                'default': ['Bourbon', 'Neat', 'Bitters'],
-                choices: ['Bourbon', 'Neat', 'Bitters']
+                'default': ['Bourbon', 'Neat', 'Bitters','Refills'],
+                choices: ['Bourbon', 'Neat', 'Bitters','Refills']
             }];
 
             this.prompt(prompt, function(response) {
@@ -141,16 +141,24 @@ module.exports = yeoman.Base.extend({
             mkdirp('public/_media/videos');
             mkdirp('sass');
 
-
+            console.log(this.options.sassLibraries);
+            
+            this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
+            this.directory('bourbon', 'sass/bourbon');
+            
+            
+            this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
+            this.directory('fonts', 'sass/fonts');
+            
+            
+            
             if (this.options.sassLibraries.indexOf('Bitters')) {
                 this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
                 this.directory('bitters', 'sass/bitters');
             }
 
-            if (this.options.sassLibraries.indexOf('Bourbon')) {
-                this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
-                this.directory('bourbon', 'sass/bourbon');
-            }
+           
+                
             if (this.options.sassLibraries.indexOf('Neat')) {
                 this.sourceRoot(path.join(__dirname, 'templates', 'sass'));
                 this.directory('neat', 'sass/neat');
@@ -185,10 +193,52 @@ module.exports = yeoman.Base.extend({
             this.copy('bower.json', 'bower.json');
             this.template('config.rb.ejs', 'config.rb', this.options);
             this.template('package.json.ejs', 'package.json', this.options);
-            this.sourceRoot(path.join(__dirname, 'templates', 'public', '_common', 'js', 'plugins'));
+            this.sourceRoot(path.join(__dirname, 'templates', 'public', '_common', 'js', 'plugins'));           
             this.copy('io-loader.js', 'public/_common/js/plugins/io-loader.js');
             this.copy('io-menu.js', 'public/_common/js/plugins/io-menu.js');
             this.copy('io-simple-page-transition.js', 'public/_common/js/plugins/io-simple-page-transition.js');
+            this.sourceRoot(path.join(__dirname, 'templates'));
+            this.directory('public','public');
+            this.copy('sass/_cards-variables.scss','sass/_cards-variables.scss');
+            this.copy('sass/_carousel-variables.scss','sass/_carousel-variables.scss');
+            this.copy('sass/_header_variables.scss','sass/_header_variables.scss');
+            this.copy('sass/_accordion-navigation-variables.scss','sass/_accordion-navigation-variables.scss');
+            this.copy('sass/_header-variables.scss','sass/_header-variables.scss');
+            this.copy('sass/_main-header-banner-footer-variables.scss','sass/_main-header-banner-footer-variables.scss');
+            this.copy('sass/_no-javascript-menu-variables.scss','sass/_no-javascript-menu-variables.scss');
+            this.copy('sass/_off-canvas-navigation.scss','sass/_off-canvas-navigation.scss');
+            this.copy('sass/_one-page-scroll-variables.scss','sass/_one-page-scroll-variables.scss');
+            this.copy('sass/_page-vertical-slides-variables.scss','sass/_page-vertical-slides-variables.scss');
+            this.copy('sass/_paragraph_variables.scss','sass/_paragraph_variables.scss');
+            this.copy('sass/_paragraph-variables.scss','sass/_paragraph-variables.scss');
+            this.copy('sass/_popup-menu-variables.scss','sass/_popup-menu-variables.scss');
+            this.copy('sass/_slide-push-menu-variables.scss','sass/_slide-push-menu-variables.scss');
+            this.copy('sass/accordion-navigation.scss','sass/accordion-navigation.scss');
+            this.copy('sass/animations.scss','sass/animations.scss');
+            this.copy('sass/basic-pin-scrollmagic.scss','sass/basic-pin-scrollmagic.scss');
+            this.copy('sass/bmw-fonts.scss','sass/bmw-fonts.scss');
+            this.copy('sass/cards.scss','sass/cards.scss');
+            this.copy('sass/carousel-component-standalone.scss', 'sass/carousel-component-standalone.scss');
+            this.copy('sass/carousel-component.scss','sass/carousel-component.scss');
+            this.copy('sass/carousel.scss', 'sass/carousel.scss');
+            this.copy('sass/droid-font.scss', 'sass/droid-font.scss');
+            this.copy('sass/font-awesome.scss','sass/font-awesome.scss');
+            this.copy('sass/header.scss','sass/header.scss');
+            this.copy('sass/infinite-scroll.scss','sass/infinite-scroll.scss');
+            this.copy('sass/main-header-banner-footer.scss','sass/main-header-banner-footer.scss');
+            this.copy('sass/no-javascript-menu.scss','sass/no-javascript-menu.scss');
+            this.copy('sass/one-page-scroll.scss','sass/one-page-scroll.scss');
+            this.copy('sass/page-vertical-slides.scss','sass/page-vertical-slides.scss');
+            this.copy('sass/pagetransitions-createjs.scss','sass/pagetransitions-createjs.scss');
+            this.copy('sass/pagetransitions-ioloader.scss', 'sass/pagetransitions-ioloader.scss');
+            this.copy('sass/paragraph.scss','sass/paragraph.scss');
+            this.copy('sass/popup-menu.scss','sass/popup-menu.scss');
+            this.copy('sass/roboto.scss', 'sass/roboto.scss');
+            //this.copy('sass/skeleton.scss', 'sass/skeleton.scss');
+            this.copy('sass/slide-push-menu.scss', 'sass/slide-push-menu.scss');
+            this.copy('sass/styles.scss','sass/styles.scss');
+            this.copy('sass/ubuntu.scss','sass/ubuntu.scss');
+            
         }
     },
 

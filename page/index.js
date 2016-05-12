@@ -263,7 +263,7 @@ PageGenerator.prototype.prompting = {
         	var prompts = [{
                 type: 'checkbox',
                 name: 'usedComponents',
-                message: chalk.green.bold('Which components do you want to use: '),
+                message: chalk.green.bold('Which components do you want to use in this page? : '),
                 'default' : [],
                 choices : ['Cards', 'Carousel', 'Paragraphs']
             }];
@@ -371,7 +371,8 @@ PageGenerator.prototype.prompting = {
 	        var prompt = [{
 	        	type: 'input',
 	            name: 'logoPath',
-	            message: chalk.green.bold('Enter the path to the logo image starting from root: ')	            
+	            message: chalk.green.bold('Enter the path to the logo image starting from root: '),
+	            'default' : '_media/examples/logo/bmw-logo.png'
 	        }];
 	        this.prompt(prompt, function(response) {
             	this.options.logoPath = response.logoPath;

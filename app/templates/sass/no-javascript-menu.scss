@@ -1,0 +1,105 @@
+@import "bourbon/bourbon";
+@import "no-javascript-menu-variables";
+
+
+
+.gen-page-content {
+    position : relative;
+    z-index : 0;
+    left: 0px;
+    width : 100%;
+    /*margin: 65px 0 0 0;*/
+    /*padding-left: 10px;*/
+    max-width: 100%;
+    @include transform(translate3d(0, 0, 0));
+    @include transition($transitionPageContent);
+}
+
+.gen-sidebar {
+	@if $menuLocation == left {
+    	@include position(fixed, 0px null null $menuWidthNegative);
+
+    } @else {
+    	 @include position(fixed, 0px $menuWidthNegative null null);
+    }
+    background : #333;
+    z-index : 0;
+    width: $menuWidth;
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+    @include transform(translate3d(0, 0, 0));
+    @include transition($transitionSidebar);
+    ul {
+        padding: 0px 0px 0px 0px;
+        li {
+            a {
+                color : rgba(255,255,255,0.8);
+                text-decoration: none;
+                &:hover {
+                    color : rgba(255,255,255,1);
+                }
+            }
+        }
+    }
+}
+
+
+.gen-nav-toggle {
+	@if $menuLocation == left {
+    	@include position(fixed, 0px 0 0 25px);
+	} @else {
+		@include position(fixed, 0px 25px null null);
+	}
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    max-width:80%;
+    height:34px;
+    width: 32px;
+    line-height: 40px;
+    color: black;
+    background-color: white;
+    @include transform(translate3d(0, 0, 0));
+    @include transition($transitionNavToggle);
+}
+
+
+#genSidebarToggler {
+    display: none;
+
+    &:checked {
+        + .gen-page-wrap {
+            .gen-sidebar {
+            	@if $menuLocation == left {
+                	left: 0px;
+				} @else {
+					right: 0px;
+				}
+            }
+            .gen-nav-toggle {
+            	@if $menuLocation == left {
+                	left: 180px
+                } @else {
+                	right: 180px
+                }
+            }
+            .gen-page-content {
+            	@if $menuLocation == left {
+                	left: $menuWidth;
+                } @else {
+            		rigth: $menuWidth;
+                }
+			}
+
+        }
+    }
+}
+
+ul.submenu {
+	overflow: hidden;
+	height: 0px;
+	@include transition($transitionSubMenu);
+}

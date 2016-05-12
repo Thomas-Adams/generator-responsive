@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     path = require('path'),
     compass = require('gulp-compass'),
     notify = require('gulp-notify'),
+    concat = require('gulp-concat'),
     gulpFont = require('./build/gulpFont.js'),
     gulpOTF = require('./build/gulpOTF.js'),
     gulpSVG = require('./build/gulpSVG.js'),
@@ -24,6 +25,21 @@ gulp.task('compass', function() {
         .pipe(gulp.dest('./public/_common/css'))
         .pipe(notify("SCSS Compiled Successfully :)"));
 });
+
+
+//TODO: concatenate + minify JavaScript
+
+
+gulp.task('concatenatejs', function(){
+	
+});
+
+
+
+//TODO: concatenate + minify CSS
+//TODO: process html
+//TODO: copy all to dist folder
+//TODO: create a zip files
 
 gulp.task('font', function() {
     gulp.src('./public/*.html').pipe(gulpFont('./public/', {

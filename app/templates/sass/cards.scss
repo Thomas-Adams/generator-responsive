@@ -1,16 +1,51 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
-
-
-
-.cards {    
+.cards {
+    $cards-flex-display: flex;
+    $cards-flex-wrap: wrap;
+    $cards-justify-content: space-between;
     @include display($cards-flex-display);
     @include flex-wrap($cards-flex-wrap);
     @include justify-content($cards-justify-content);
 }
 
 .card {
+    $base-border-color: gainsboro !default;
+    $base-border-radius: 3px !default;
+    $base-background-color: white !default;
+    $base-spacing: 1.5em !default;
+    $action-color: #477DCA !default;
+    $dark-gray: #333 !default;
+    $base-font-color: $dark-gray !default;
+    $card-image-hover-color: #F8F2B4 !default;
+    $card-border-color: $base-border-color;
+    $card-border: 1px solid $card-border-color;
+    $card-background: lighten($card-border-color, 10%);
+    $card-header-background: $card-background;
+    $card-margin: 1em;
+    $card-image-hover-opacity: .7;
+    $card-position: absolute;
+    $card-top-position: 35%;
+    $card-left-position: null;
+    $card-bottom-position: null;
+    $card-right-position: null;
+    $card-flex-basis: 15em;
+    $card-flex-grow:1;
+    $card-box-shadow: 0 2px 4px darken($base-background-color, 10%);
+    $card-transition: all .2s ease-in-out;
+    $card-header-line-height: 1.5em;
+    $card-header-font-weight: bold;
+    $card-image-max-height: 550px;
+    $card-copy-font-size: .9em;
+    $card-copy-line-height:1.5em;
+    $card-image-img-width:100%;
+    $card-image-img-opacity: 1;
+    $card-header-transition-value:all .2s ease-in-out;
+    $card-image-img-transition-value: all .2s ease-in-out;
+    $card-cursor: pointer;
+    $card-image-overflow: hidden;
+
     @include flex-basis($card-flex-basis);
     @include flex-grow($card-flex-grow);
     @include transition($card-transition);

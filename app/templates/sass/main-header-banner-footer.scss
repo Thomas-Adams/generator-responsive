@@ -1,0 +1,128 @@
+@import "bourbon/bourbon"; 
+@import "_main-header-banner-footer-variables";
+
+div.container-fluid {
+    width:100%;
+    height:100%;
+    @include position(absolute,0 null null 0);
+    @include perspective(1200px);
+    padding:0;
+}
+nav {
+    background:#47a3da;
+}
+
+
+header.left {
+    color: $header-color;
+    width:$header-width;
+    z-index: $header-z-index;
+    @include position($header-position,$header-top null null $header-left);
+    h1 {
+        @include position($header-h1-position,$header-h1-top null null $header-left-h1-left);
+        @include margin($header-h1-margin);
+        font-size: $header-h1-font-size;
+    }
+    i {
+        @include margin($header-i-margin);
+        @include padding($header-i-padding);
+        border: $header-i-border;
+        cursor: $header-i-cursor;
+    }
+
+    .logo {
+        width:$header-logo-width;
+        @include position($header-logo-position,$header-logo-top $header-left-logo-right null null);
+        z-index: $header-logo-z-index;
+    }
+}
+
+header.right {
+    color: $header-color;
+    width:$header-width;
+    z-index: $header-z-index;
+    @include position($header-position,$header-top null null $header-left);
+    h1 {
+        @include position($header-h1-position,$header-h1-top null null $header-right-h1-left);
+        @include margin($header-h1-margin);
+        font-size: $header-h1-font-size;
+    }
+    i {
+        @include margin($header-i-margin);
+        @include padding($header-i-padding);
+        border: $header-i-border;
+        cursor: $header-i-cursor;
+        @include position($header-right-i-position, null $header-right-i-right null null);
+    }
+}
+
+
+
+
+
+
+
+/* lazy loading styles */
+.lazy {
+  opacity: 0;
+  @include transition($transitionLazyLoaded);
+}
+
+.lazy-loaded {
+  opacity: 1;
+}
+
+section {
+    width: 100%;
+	height: 100%;
+    @include position(absolute, 0px null null 0px);
+	visibility: hidden;
+	overflow: hidden;
+    @include backface-visibility(hidden);
+    @include transform(translate3d(0,0,0));
+    @include transform-style(preserve-3d);
+}
+
+section.current {
+    visibility: visible;
+    z-index: 1;
+}
+
+.ontop {
+	z-index: 999;
+}
+
+
+/* This is mainly for the background images of each section ("page"). */
+/* !FOCUSED IMAGES */
+/*-----------------------------------------*/
+.focuspoint {
+  position: relative; /*Any position but static should work*/
+  overflow: hidden;
+  height: 100%;
+}
+.focuspoint img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  display: block;
+  /* fill and maintain aspect ratio */
+  width: auto; height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: none;
+  max-width: none;
+}
+
+
+div.overlay {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0,0,0,0.5) url("images/712.gif") no-repeat scroll center center;
+    position: absolute;
+    top: 0px;
+    left:0px;
+}

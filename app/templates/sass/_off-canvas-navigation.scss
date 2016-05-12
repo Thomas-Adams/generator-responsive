@@ -1,0 +1,127 @@
+@import "bourbon/bourbon";
+
+$menuWidth : 160px;
+$menuWidthNegative : -1*$menuWidth;
+
+.main {
+    z-index : 0;
+    @include transition(left 0.4s ease-in);
+    transform: translate3d(0, 0, 0);   
+}
+.gen-page-content {    
+    left: 0px;
+    margin: 0px 0px 0px 0px;
+    @include transition(left 0.4s ease-in);
+    transform: translate3d(0, 0, 0);    
+}
+
+.gen-sidebar {
+    @include position(absolute, 0px null null $menuWidthNegative);
+    background : #333;
+    z-index : 0;
+    width: $menuWidth;
+    height: 100%;
+    padding: 30px;
+   @include transition(left 0.4s ease-in);
+    transform: translate3d(0, 0, 0);    
+    ul {
+        padding: 0px 0px 0px 0px;
+        li {
+            a {
+                color : rgba(255,255,255,0.8);
+                text-decoration: none;
+                &:hover {
+                    color : rgba(255,255,255,1);
+                }
+            }
+        }
+    }
+}
+
+
+.gen-nav-toggle {
+    @include position(absolute, 0px 0 0 0px);
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    z-index: 1;
+    cursor: pointer;
+    height:38px;
+    width: 38px;
+    line-height: 30px;
+    color: white;
+    background-color: transparent;
+    padding: 4px 4px 4px 4px;
+    @include transition(left 0.4s ease-in);
+    transform: translate3d(0, 0, 0);    
+}
+
+
+
+#genSidebarToggler {
+    display: none;
+    
+    & {
+    
+        + .gen-page-wrap {
+            .gen-sidebar { 
+                @include position(absolute, 0px null null $menuWidthNegative); 
+                @include transition(left 0.4s ease-in);
+                transform: translate3d(0, 0, 0); 
+            }
+            
+            .gen-nav-toggle {                
+                left: 0px;
+                @include transition(left 0.4s ease-in);
+                transform: translate3d(0, 0, 0);
+            }
+            .gen-page-content {                
+                left: 0px;
+                @include transition(left 0.4s ease-in);
+                transform: translate3d(0, 0, 0);
+            }
+        }   
+    }
+    
+    
+    &:checked {
+        + .gen-page-wrap {
+            .gen-sidebar {  
+                @include transition(left 0.4s ease-in);
+                transform: translate3d(0, 0, 0);                            
+                left: 0px;
+            }
+            .gen-nav-toggle {                
+                left: $menuWidth;
+                @include transition(left 0.4s ease-in);
+                transform: translate3d(0, 0, 0);
+            }
+            .gen-page-content {                
+                left: $menuWidth;
+                @include transition(left 0.4s ease-in);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}
+
+ul.submenu {
+    overflow: hidden;
+    height: 0px;
+    @include transition();
+}
+
+
+.nav-button-wrapper-up, .nav-button-wrapper-down {
+    position: absolute;
+    text-align: center;
+    width:100%;
+}
+
+.nav-button-wrapper-down {
+    bottom: 80px;
+}
+
+.nav-button-wrapper-up {
+    top: 80px;
+}

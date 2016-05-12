@@ -1,173 +1,161 @@
 @import "bourbon/bourbon";
 
-$animation-moving-duration : 0.6s;
-$animation-moving-timing-function: ease;
-$animation-moving-fill-mode: both;
-
 .ontop {
 	z-index: 999;
 }
 
+
 /* animations moving */
 .moveToLeft {
     @include animation(moveToLeft);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromLeft {
     @include animation(moveFromLeft);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToRight {
     @include animation(moveToRight);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromRight {
     @include animation(moveFromRight);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToTop {
     @include animation(moveToTop);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromTop {
     @include animation(moveFromTop);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToBottom {
     @include animation(moveToBottom);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromBottom {
     @include animation(moveFromBottom);
-    @include animation-duration($animation-moving-duration);
-    @include animation-timing-function($animation-moving-timing-function);
-    @include animation-fill-mode($animation-moving-fill-mode);
+    @include animation-duration(0.6s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
-
-$animation-fading-duration : 0.7s;
-$animation-fading-timing-function: ease;
-$animation-fading-fill-mode: both;
 
 /* animations fading */
 
 .fade {
     @include animation(fade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToLeftFade {
     @include animation(moveToLeftFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromLeftFade {
     @include animation(moveFromLeftFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToRightFade {
     @include animation(moveToRightFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromRightFade {
     @include animation(moveFromRightFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToTopFade {
     @include animation(moveToTopFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromTopFade {
     @include animation(moveFromTopFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveToBottomFade {
     @include animation(moveToBottomFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 .moveFromBottomFade {
     @include animation(moveFromBottomFade);
-    @include animation-duration($animation-fading-duration );
-    @include animation-timing-function($animation-fading-timing-function);
-    @include animation-fill-mode($animation-fading-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 /* move to with different easing */
 
-
-$animation-moving-easing-duration : 0.7s;
-$animation-moving-easing-timing-function: ease-in-out;
-$animation-moving-easing-fill-mode: both;
-
 .moveToLeftEasing {
     @include animation(moveToLeft);
-    @include animation-duration($animation-moving-easing-duration);
-    @include animation-timing-function($animation-moving-easing-timing-function);
-    @include animation-fill-mode($animation-moving-easing-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
 }
 
 .moveToRightEasing {
     @include animation(moveToRight);
-    @include animation-duration($animation-moving-easing-duration);
-    @include animation-timing-function($animation-moving-easing-timing-function);
-    @include animation-fill-mode($animation-moving-easing-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
 }
 
 .moveToTopEasing {
     @include animation(moveToTop);
-    @include animation-duration($animation-moving-easing-duration);
-    @include animation-timing-function($animation-moving-easing-timing-function);
-    @include animation-fill-mode($animation-moving-easing-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
 }
 
 .moveToBottomEasing {
     @include animation(moveToBottom);
-    @include animation-duration($animation-moving-easing-duration);
-    @include animation-timing-function($animation-moving-easing-timing-function);
-    @include animation-fill-mode($animation-moving-easing-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease-in-out);
+    @include animation-fill-mode(both);
 }
 
 /********************************* keyframes **************************************/
@@ -211,7 +199,6 @@ $animation-moving-easing-fill-mode: both;
     from{@include transform(tramslateY(100%));}
 }
 
-$animation-move-fade-start-opacity: 0.3;
 
 /* fade */
 @include keyframes(fade) {
@@ -223,231 +210,190 @@ $animation-move-fade-start-opacity: 0.3;
 /* move from / to and fade */
 @include keyframes(moveToLeftFade) {
     from {}
-    to {opacity:$animation-move-fade-start-opacity; @include transform(translateX(-100%));}
+    to {opacity:0.3; @include transform(translateX(-100%));}
 }
 @include keyframes(moveFromLeftFade) {
-    from {opacity:$animation-move-fade-start-opacity; @include transform(translateX(-100%));}
+    from {opacity:0.3; @include transform(translateX(-100%));}
 }
 @include keyframes(moveToRightFade) {
     from {}
-    to {opacity:$animation-move-fade-start-opacity; @include transform(translateX(100%));}
+    to {opacity:0.3; @include transform(translateX(100%));}
 }
 @include keyframes(moveFromRightFade) {
-    from {opacity:$animation-move-fade-start-opacity; @include transform(translateX(100%));}
+    from {opacity:0.3; @include transform(translateX(100%));}
 }
 @include keyframes(moveToTopFade) {
     from {}
-    to {opacity:$animation-move-fade-start-opacity; @include transform(translateY(-100%));}
+    to {opacity:0.3; @include transform(translateY(-100%));}
 }
 @include keyframes(moveFromTopFade) {
-    from {opacity:$animation-move-fade-start-opacity; @include transform(translateY(-100%));}
+    from {opacity:0.3; @include transform(translateY(-100%));}
 }
 @include keyframes(moveToBottomFade) {
     from {}
-    to {opacity:$animation-move-fade-start-opacity; @include transform(translateY(100%));}
+    to {opacity:0.3; @include transform(translateY(100%));}
 }
 @include keyframes(moveFromBottomFade) {
-    from {opacity:$animation-move-fade-start-opacity; @include transform(translateY(100%));}
+    from {opacity:0.3; @include transform(translateY(100%));}
 }
 /* scale and fade */
-
-$animation-scale-duration : 0.7s;
-$animation-scale-timing-function: ease;
-$animation-scale-fill-mode: both;
-$animation-scale-down-up-duration : 0.5s;
-$animation-scale-down-up-timing-function: ease;
-$animation-scale-down-up-fill-mode: both;
-$animation-scale-center-duration : 0.4s;
-$animation-scale-down-center-timing-function: ease-in;
-$animation-scale-up-center-timing-function: ease-out;
-$animation-scale-center-fill-mode: both;
-
 .scaleDown {
     @include animation(scaleDown);
-    @include animation-duration($animation-scale-duration);
-    @include animation-timing-function($animation-scale-timing-function);
-    @include animation-fill-mode($animation-scale-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .scaleUp {
     @include animation(scaleUp);
-    @include animation-duration($animation-scale-duration);
-    @include animation-timing-function($animation-scale-timing-function);
-    @include animation-fill-mode($animation-scale-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .scaleUpDown {
     @include animation(scaleUpDown);
-    @include animation-duration($animation-scale-down-up-duration);
-    @include animation-timing-function($animation-scale-down-up-timing-function);
-    @include animation-fill-mode($animation-scale-down-up-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .scaleDownUp {
     @include animation(scaleDownUp);
-    @include animation-duration($animation-scale-down-up-duration);
-    @include animation-timing-function($animation-scale-down-up-timing-function);
-    @include animation-fill-mode($animation-scale-down-up-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .scaleDownCenter {
     @include animation(scaleDownCenter);
-    @include animation-duration($animation-scale-center-duration);
-    @include animation-timing-function($animation-scale-down-center-timing-function);
-    @include animation-fill-mode($animation-scale-center-fill-mode);
+    @include animation-duration(0.4s);
+    @include animation-timing-function(ease-in);
+    @include animation-fill-mode(both);
 }
 .scaleUpCenter {
     @include animation(scaleUpCenter);
-    @include animation-duration($animation-scale-center-duration);
-    @include animation-timing-function($animation-scale-up-center-timing-function);
-    @include animation-fill-mode($animation-scale-center-fill-mode);
+    @include animation-duration(0.4s);
+    @include animation-timing-function(ease-out);
+    @include animation-fill-mode(both);
 }
-
-$animation-scale-start-opacity: 0;
-$animation-scale-up-down-value:0.8;
-$animation-scale-updown-value:1.2;
-$animation-scale-downup-value:1.2;
-$animation-scale-downcenter-value:0.7;
-$animation-scale-upcenter-value:0.7;
 
 @include keyframes(scaleDown) {
     from {}
-    to {opacity:$animation-scale-start-opacity;@include transform(scale($animation-scale-up-down-value));}
+    to {opacity:0;@include transform(scale(0.8));}
 }
 @include keyframes(scaleUp) {
-    from {opacity:$animation-scale-start-opacity;@include transform(scale($animation-scale-up-down-value));}
+    from {opacity:0;@include transform(scale(0.8));}
 }
 @include keyframes(scaleUpDown) {
-    from {opacity:$animation-scale-start-opacity;@include transform(scale($animation-scale-updown-value));}
+    from {opacity:0;@include transform(scale(1.2));}
 }
 @include keyframes(scaleDownUp) {
     from {}
-    to {opacity:$animation-scale-start-opacity;@include transform(scale($animation-scale-downup-value));}
+    to {opacity:0;@include transform(scale(1.2));}
 }
 @include keyframes(scaleDownCenter) {
     from {}
-    to {opacity:$animation-scale-start-opacity;@include transform(scale($animation-scale-downcenter-value));}
+    to {opacity:0;@include transform(scale(0.7));}
 }
 @include keyframes(scaleUpCenter) {
-    from {opacity:$animation-scale-start-opacity;@include transform(scale($animation-scale-upcenter-value));}
+    from {opacity:0;@include transform(scale(0.7));}
 }
-
 
 
  /* rotate sides first and scale */
- 
-$animation-rotate-scale-duration : 0.8s;
-$animation-rotate-scale-timing-function: ease-in;
-$animation-rotate-scale-fill-mode: both;
- 
  .rotateRightSideFirst {
      @include transform-origin(0% 50%);
      @include animation(rotateRightSideFirst);
-     @include animation-duration($animation-rotate-scale-duration);
-     @include animation-timing-function($animation-rotate-scale-timing-function);
-     @include animation-fill-mode($animation-rotate-scale-fill-mode);
+     @include animation-duration(0.8s);
+     @include animation-timing-function(ease-in);
+     @include animation-fill-mode(both);
  }
  .rotateLeftSideFirst {
      @include transform-origin(100% 50%);
      @include animation(rotateLeftSideFirst);
-     @include animation-duration($animation-rotate-scale-duration);
-     @include animation-timing-function($animation-rotate-scale-timing-function);
-     @include animation-fill-mode($animation-rotate-scale-fill-mode);
+     @include animation-duration(0.8s);
+     @include animation-timing-function(ease-in);
+     @include animation-fill-mode(both);
  }
 
  .rotateTopSideFirst {
      @include transform-origin(50% 100%);
      @include animation(rotateTopSideFirst);
-     @include animation-duration($animation-rotate-scale-duration);
-     @include animation-timing-function($animation-rotate-scale-timing-function);
-     @include animation-fill-mode($animation-rotate-scale-fill-mode);
+     @include animation-duration(0.8s);
+     @include animation-timing-function(ease-in);
+     @include animation-fill-mode(both);
  }
 
  .rotateBottomSideFirst {
      @include transform-origin(50% 0%);
      @include animation(rotateTopSideFirst);
-     @include animation-duration($animation-rotate-scale-duration);
-     @include animation-timing-function($animation-rotate-scale-timing-function);
-     @include animation-fill-mode($animation-rotate-scale-fill-mode);
+     @include animation-duration(0.8s);
+     @include animation-timing-function(ease-in);
+     @include animation-fill-mode(both);
  }
 
 /* flip */
 
-$animation-flip-duration : 0.5s;
-$animation-flip-in-timing-function: ease-in;
-$animation-flip-out-timing-function: ease-out;
-$animation-flip-fill-mode: both;
-
 .flipOutRight {
     @include transform-origin(50% 50%);
     @include animation(flipOutRight);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-in-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-in);
+    @include animation-fill-mode(both);
 }
 .flipInLeft {
     @include transform-origin(50% 50%);
     @include animation(flipInLeft);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-out-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-out);
+    @include animation-fill-mode(both);
 }
 .flipOutLeft {
     @include transform-origin(50% 50%);
     @include animation(flipOutLeft);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-in-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-in);
+    @include animation-fill-mode(both);
 }
 .flipInRight {
     @include transform-origin(50% 50%);
     @include animation(flipInRight);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-out-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-out);
+    @include animation-fill-mode(both);
 }
 .flipOutTop {
     @include transform-origin(50% 50%);
     @include animation(flipOutTop);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-in-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-in);
+    @include animation-fill-mode(both);
 }
 .flipInBottom {
     @include transform-origin(50% 50%);
     @include animation(flipInBottom);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-out-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-out);
+    @include animation-fill-mode(both);
 }
 .flipOutBottom {
     @include transform-origin(50% 50%);
     @include animation(flipOutBottom);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-in-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-in);
+    @include animation-fill-mode(both);
 }
 .flipInTop {
     @include transform-origin(50% 50%);
     @include animation(flipInTop);
-    @include animation-duration($animation-flip-duration);
-    @include animation-timing-function($animation-flip-out-timing-function);
-    @include animation-fill-mode($animation-flip-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-out);
+    @include animation-fill-mode(both);
 }
 
 /* rotate fall */
-$animation-rotate-fall-duration: 1s;
-$animation-rotate-fall-timing-function: ease-in;
-$animation-rotate-fall-mode: both;
-
-$animation-rotate-out-duration: 0.5s;
-$animation-rotate-out-timing-function: ease-in;
-$animation-rotate-out-mode: both;
-
-$animation-rotate-in-duration: 1s;
-$animation-rotate-in-timing-function: ease-out;
-$animation-rotate-in-mode: both;
 
 .rotateFall {
     @include transform-origin(0% 0%);
     @include animation(rotateFall);
-    @include animation-duration($animation-rotate-fall-duration);
+    @include animation-duration(1s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
@@ -455,156 +401,136 @@ $animation-rotate-in-mode: both;
 .rotateOutNewspaper {
     @include transform-origin(50% 50%);
     @include animation(rotateOutNewspaper);
-    @include animation-duration($animation-rotate-out-duration);
-    @include animation-timing-function($animation-rotate-out-timing-function);
-    @include animation-fill-mode($animation-rotate-out-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-in);
+    @include animation-fill-mode(both);
 }
 .rotateInNewspaper {
     @include transform-origin(50% 50%);
     @include animation(rotateInNewspaper);
-    @include animation-duration($animation-rotate-in-duration);
-    @include animation-timing-function($animation-rotate-in-timing-function);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease-out);
     @include animation-fill-mode(both);
 }
-
-
-
-$animation-push-duration: 0.8s;
-$animation-push-timing-function: ease;
-$animation-push-mode: both;
 
 /* push */
 .rotatePushLeft {
     @include transform-origin(0% 50%);
     @include animation(rotatePushLeft);
-    @include animation-duration($animation-push-duration);
-    @include animation-timing-function($animation-push-timing-function);
-    @include animation-fill-mode($animation-push-mode);
+    @include animation-duration(0.8s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotatePushRight {
     @include transform-origin(100% 50%);
     @include animation(rotatePushRight);
-    @include animation-duration($animation-push-duration);
-    @include animation-timing-function($animation-push-timing-function);
-    @include animation-fill-mode($animation-push-mode);
+    @include animation-duration(0.8s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotatePushTop {
     @include transform-origin(50% 0%);
     @include animation(rotatePushTop);
-    @include animation-duration($animation-push-duration);
-    @include animation-timing-function($animation-push-timing-function);
-    @include animation-fill-mode($animation-push-mode);
+    @include animation-duration(0.8s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotatePushBottom {
     @include transform-origin(50% 100%);
     @include animation(rotatePushBottom);
-    @include animation-duration($animation-push-duration);
-    @include animation-timing-function($animation-push-timing-function);
-    @include animation-fill-mode($animation-push-mode);
+    @include animation-duration(0.8s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 /* pull */
-
-$animation-pull-duration: 0.5s;
-$animation-pull-timing-function: ease;
-$animation-pull-fill-mode: both;
-
 .rotatePullRight {
     @include transform-origin(100% 50%);
     @include animation(rotatePullRight);
-    @include animation-duration($animation-pull-duration);
-    @include animation-timing-function($animation-pull-timing-function);
-    @include animation-fill-mode($animation-pull-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotatePullLeft {
     @include transform-origin(0% 50%);
     @include animation(rotatePullLeft);
-    @include animation-duration($animation-pull-duration);
-    @include animation-timing-function($animation-pull-timing-function);
-    @include animation-fill-mode($animation-pull-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotatePullTop {
     @include transform-origin(50% 0%);
     @include animation(rotatePullTop);
-    @include animation-duration($animation-pull-duration);
-    @include animation-timing-function($animation-pull-timing-function);
-    @include animation-fill-mode($animation-pull-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotatePullBottom {
     @include transform-origin(50% 100%);
     @include animation(rotatePullBottom);
-    @include animation-duration($animation-pull-duration);
-    @include animation-timing-function($animation-pull-timing-function);
-    @include animation-fill-mode($animation-pull-fill-mode);
+    @include animation-duration(0.5s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 /* fold */
-
-$animation-rotate-fold-duration: 0.7s;
-$animation-rotate-fold-timing-function: ease;
-$animation-rotate-fold-fill-mode: both;
 .rotateFoldRight {
     @include transform-origin(0% 50%);
     @include animation(rotateFoldRight);
-    @include animation-duration($animation-rotate-fold-duration);
-    @include animation-timing-function($animation-rotate-fold-timing-function);
-    @include animation-fill-mode($animation-rotate-fold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotateFoldLeft {
     @include transform-origin(100% 50%);
     @include animation(rotateFoldLeft);
-    @include animation-duration($animation-rotate-fold-duration);
-    @include animation-timing-function($animation-rotate-fold-timing-function);
-    @include animation-fill-mode($animation-rotate-fold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotateFoldTop {
     @include transform-origin(50% 100%);
     @include animation(rotateFoldTop);
-    @include animation-duration($animation-rotate-fold-duration);
-    @include animation-timing-function($animation-rotate-fold-timing-function);
-    @include animation-fill-mode($animation-rotate-fold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotateFoldBottom {
     @include transform-origin(50% 0%);
     @include animation(rotateFoldBottom);
-    @include animation-duration($animation-rotate-fold-duration);
-    @include animation-timing-function($animation-rotate-fold-timing-function);
-    @include animation-fill-mode($animation-rotate-fold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 /* unfold */
-
-$animation-rotate-unfold-duration: 0.7s;
-$animation-rotate-unfold-timing-function: ease;
-$animation-rotate-unfold-fill-mode: both;
-
 .rotateUnfoldLeft {
     @include transform-origin(100% 50%);
     @include animation(rotateUnfoldLeft);
-    @include animation-duration($animation-rotate-unfold-duration);
-    @include animation-timing-function($animation-rotate-unfold-timing-function);
-    @include animation-fill-mode($animation-rotate-unfold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotateUnfoldRight {
     @include transform-origin(0% 50%);
     @include animation(rotateUnfoldRight);
-    @include animation-duration($animation-rotate-unfold-duration);
-    @include animation-timing-function($animation-rotate-unfold-timing-function);
-    @include animation-fill-mode($animation-rotate-unfold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotateUnfoldTop {
     @include transform-origin(50% 100%);
     @include animation(rotateUnfoldTop);
-    @include animation-duration($animation-rotate-unfold-duration);
-    @include animation-timing-function($animation-rotate-unfold-timing-function);
-    @include animation-fill-mode($animation-rotate-unfold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 .rotateUnfoldBottom {
     @include transform-origin(50% 0%);
     @include animation(rotateUnfoldBottom);
-    @include animation-duration($animation-rotate-unfold-duration);
-    @include animation-timing-function($animation-rotate-unfold-timing-function);
-    @include animation-fill-mode($animation-rotate-unfold-fill-mode);
+    @include animation-duration(0.7s);
+    @include animation-timing-function(ease);
+    @include animation-fill-mode(both);
 }
 
 /* room walls */
@@ -672,56 +598,56 @@ $animation-rotate-unfold-fill-mode: both;
 .rotateCubeLeftOut {
     @include transform-origin(100% 50%);
     @include animation(rotateCubeLeftOut);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeLeftIn {
     @include transform-origin(0% 50%);
     @include animation(rotateCubeLeftIn);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeRightOut {
     @include transform-origin(0% 50%);
     @include animation(rotateCubeRightOut);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeRightIn {
     @include transform-origin(100% 50%);
     @include animation(rotateCubeRightIn);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeTopOut {
     @include transform-origin(50% 100%);
     @include animation(rotateCubeTopOut);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeTopIn {
     @include transform-origin(50% 0%);
     @include animation(rotateCubeTopIn);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeBottomOut {
     @include transform-origin(50% 0%);
     @include animation(rotateCubeBottomOut);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
 .rotateCubeBottomIn {
     @include transform-origin(50% 100%);
     @include animation(rotateCubeBottomIn);
-    @include animation-duration($animation-duration);
+    @include animation-duration(0.6s);
     @include animation-timing-function(ease-in);
     @include animation-fill-mode(both);
 }
