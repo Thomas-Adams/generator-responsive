@@ -265,7 +265,7 @@ PageGenerator.prototype.prompting = {
                 name: 'usedComponents',
                 message: chalk.green.bold('Which components do you want to use in this page? : '),
                 'default' : [],
-                choices : ['Cards', 'Carousel', 'Paragraphs']
+                choices : ['Cards', 'Carousel', 'Paragraph']
             }];
             
             this.prompt(prompts, function(response) {

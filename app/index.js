@@ -186,6 +186,7 @@ module.exports = yeoman.Base.extend({
             this.sourceRoot(path.join(__dirname, 'templates', 'basic'));
             this.directory('bin', 'bin');
             this.directory('routes', 'routes');
+            this.directory('views', 'views');
             this.copy('.bowerrc', '.bowerrc');
             this.copy('.gitignore', '.gitignore');
             this.copy('.jshintrc', '.jshintrc');
@@ -243,12 +244,17 @@ module.exports = yeoman.Base.extend({
     },
 
     install: function() {
+    	var self = this;
         this.installDependencies({
             bower: true,
             npm: true,
             callback: function() {
-                console.log('Everything is ready!');
+                self.spawnCommandSync('compass',['compile']);
             }
         });
+    },
+    
+    end : function(){
+    	console.log("All done, see you...");
     }
 });

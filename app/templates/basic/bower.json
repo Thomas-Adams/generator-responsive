@@ -28,6 +28,8 @@
     "Slidebars": "~0.10.3",
     "gsap": "https://github.com/greensock/GreenSock-JS.git#^1.18.2",
     "slick-carousel": "^1.5.9",
-    "touch-swipe": "https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git#1.6.x"
+    "touch-swipe": "https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git#1.6.x",
+    "hammerjs": "^2.0.8",
+    "modernizr": "^3.3.1"
   }
 }
